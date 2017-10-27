@@ -7,14 +7,18 @@ class EyesOnMe extends React.Component {
 
   }
 
-  inputPassword = () => {
+  _onBlur = () => {
+    console.log('Hey! Eyes on me!')
+  }
 
+  _onFocus = () => {
+    console.log('Good!')
   }
 
   render() {
     return (
-      <input onClick={this.inputPassword} type='password'>
-      </input>
+      <button onBlur={this._onBlur} onFocus={this._onFocus}>
+      </button>
     )
 
   }
